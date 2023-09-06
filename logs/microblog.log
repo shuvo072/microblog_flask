@@ -1,0 +1,113 @@
+2022-10-26 12:55:57,068 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:47]
+2022-10-26 13:00:15,777 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:47]
+2022-10-26 13:00:54,235 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:47]
+2022-10-26 13:01:01,491 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:47]
+2022-10-26 13:01:25,137 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:47]
+2022-10-27 09:38:47,649 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:48]
+2022-10-27 09:38:54,162 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:48]
+2022-10-27 09:38:58,582 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:48]
+2022-10-27 09:39:06,408 ERROR: Exception on / [GET] [in /home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/shuvo72/microblog/app/routes.py", line 56, in index
+    return render_template('index.html',title = 'Home Page', form = form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/shuvo72/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/shuvo72/microblog/app/templates/base.html", line 120, in template
+    {% block content %}{% endblock %}
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2022-10-27 09:39:06,662 ERROR: Exception on /favicon.ico [GET] [in /home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1666, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1606, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "/home/shuvo72/microblog/app/errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/shuvo72/microblog/app/templates/404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/shuvo72/microblog/app/templates/base.html", line 120, in template
+    {% block content %}{% endblock %}
+jinja2.exceptions.TemplateAssertionError: block 'content' defined twice
+2022-10-27 13:21:22,586 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:74]
+2022-10-27 16:35:52,352 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:74]
+2022-10-27 16:46:42,401 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:74]
+2022-10-30 10:45:18,498 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:77]
+2022-10-30 11:17:04,526 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:77]
+2022-10-30 11:50:06,353 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:77]
+2022-10-30 12:48:15,727 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:77]
+2022-10-30 13:22:15,785 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:77]
+2022-10-31 08:40:43,214 INFO: Microblog startup [in /home/shuvo72/microblog/app/__init__.py:77]
+2022-10-31 08:40:53,443 ERROR: Exception on /search [GET] [in /home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/shuvo72/microblog/app/main/routes.py", line 152, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "/home/shuvo72/microblog/app/models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "/home/shuvo72/microblog/app/search.py", line 19, in query_index
+    search = current_app.elasticsearch.search(
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py", line 414, in wrapped
+    return api(*args, **kwargs)
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py", line 3770, in search
+    return self.perform_request(  # type: ignore[return-value]
+  File "/home/shuvo72/microblog/venv/lib/python3.10/site-packages/elasticsearch/_sync/client/_base.py", line 321, in perform_request
+    raise HTTP_EXCEPTIONS.get(meta.status, ApiError)(
+elasticsearch.AuthenticationException: AuthenticationException(401, 'security_exception', 'missing authentication credentials for REST request [/post/_search]')
